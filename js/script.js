@@ -36,7 +36,6 @@ const app = new Vue(
                 this.indexCheck = index
                 this.active = !this.active;
             }
-
         }
     }
 );
