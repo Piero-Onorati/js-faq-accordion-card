@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    font-size: 100%;
+    font-family: inherit;
+    padding: 0;
+    border:0
+}
+
+button:hover,
+button:focus {
+    background: none;
+}
+
+button:focus {
+    outline:none;
+    outline-offset: none;
+}
+
+button:active {
+    transform: none;
+}
+
+button>span{
+    color:hsl(240, 6%, 50%);
+}
+
+button>span:hover{
+    cursor:pointer;
+}
+
+button>span:active{
+    cursor:pointer;
+    color:hsl(14, 88%, 65%);
+}
+
+.accordion-item {
+    color:hsl(240, 6%, 50%);
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+
+.card{
+    background:  url(../images/bg-pattern-mobile.svg), white;
+    background-repeat:no-repeat;
+    background-position: top center;
+    max-width: 90%;
+    min-height: 70%;
+    border-radius: 24px;
+}
+
+.card-image, 
+.card-text{
+      
+}
+
+.card-image{
+    position: relative;
+    height:130px
+}
+
+.card-image .mobile-img{
+    position: absolute;
+    top: -85%;
+    left: 10%; 
+}
+
+.card-image .desktop-img{
+    display: none; 
+}
+
+.card .box{
+    display: none;
+}
+
+.card-text{}
+
+
+@media screen and (min-width:768px) {
+
+    .card{
+        width: 70%;
+        height: 70%;
+        min-height: 550px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:  url(../images/bg-pattern-desktop.svg), white;
+        background-position:-730px -300px;
+        background-repeat:no-repeat;
+        overflow: hidden;
+    }
+
+    .card-image, 
+    .card-text{
+        flex:1;
+    } 
+
+    .card-image{
+        position: relative;
+    }
+
+    .card-image .mobile-img{
+        display: none;
+    }
+
+    .card-image .desktop-img{
+        display: inline-block;
+        width: 100%;
+        position: absolute;
+        top:50%;
+        left:-15%;
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+
+    .card-text{}
+
+}
+
+@media screen and (min-width:1200px) {
+
+    .card{
+        background-size: 90%;
+        background-position: -33rem -17rem;
+    }
+
+    .card .box{
+        display: inline-block;
+        position: absolute;
+        left:9%;
+        z-index: 2;
+    }
+
+    .card-image .desktop-img{
+        width: 90%;
+    }
+}
