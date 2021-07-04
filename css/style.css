@@ -120,15 +120,6 @@ button>span:active{
 
 @media screen and (min-width:768px) {
 
-    h1{
-        text-align: left;
-        padding-bottom: 30px;
-    }
-
-    .accordion-item{
-        width: 80%;
-    }
-
     .card{
         width: 70%;
         height: 70%;
@@ -163,6 +154,15 @@ button>span:active{
         left:-15%;
         transform: translateY(-50%);
         z-index: 0;
+    }
+
+    .card-text  h1{
+        text-align: left;
+        padding-bottom: 30px;
+    }
+
+    .card-text .accordion-item {
+        width: 85%;
     }
 
 
