@@ -17,13 +17,13 @@ body{
 
 button{
     width: 100%;
+    padding:15px 0 ;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: transparent;
     font-size: 100%;
     font-family: inherit;
-    padding: 0;
     border:0
 }
 
@@ -45,6 +45,11 @@ button>span{
     color:hsl(240, 6%, 50%);
 }
 
+.boldQuestion{
+    color:hsl(237, 12%, 33%);
+    font-weight: bold;
+}
+
 button>span:hover{
     cursor:pointer;
 }
@@ -54,17 +59,28 @@ button>span:active{
     color:hsl(14, 88%, 65%);
 }
 
+h1{
+    text-align: center;
+    color:hsl(238, 29%, 16%);
+    font-size: 32px;
+    padding: 10px 0 20px 0;
+}
+
 .accordion-item {
+    width: 100%;
     color:hsl(240, 6%, 50%);
     border-bottom: 1px solid hsl(240, 5%, 91%);
 }
 
+.accordion-item p{
+    padding-bottom: 15px;
+}
 
 .card{
     background:  url(../images/bg-pattern-mobile.svg), white;
     background-repeat:no-repeat;
     background-position: top center;
-    max-width: 90%;
+    width: 90%;
     min-height: 70%;
     border-radius: 24px;
 }
@@ -76,13 +92,15 @@ button>span:active{
 
 .card-image{
     position: relative;
-    height:130px
+    height:130px;
+    width:100%;
 }
 
 .card-image .mobile-img{
     position: absolute;
     top: -85%;
-    left: 10%; 
+    left: 45%;
+    transform: translateX(-50%);
 }
 
 .card-image .desktop-img{
@@ -93,10 +111,21 @@ button>span:active{
     display: none;
 }
 
-.card-text{}
+.card-text{
+    padding:0 25px;
+}
 
 
 @media screen and (min-width:768px) {
+
+    h1{
+        text-align: left;
+        padding-bottom: 30px;
+    }
+
+    .accordion-item{
+        width: 80%;
+    }
 
     .card{
         width: 70%;
