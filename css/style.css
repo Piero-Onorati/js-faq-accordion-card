@@ -183,3 +183,30 @@ button>span:active{
         width: 90%;
     }
 }
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+} 
+
+.open{
+    font-weight: 700;
+}
+
+.accordion-answer.collapse{
+    display: none;
+}
+
+.accordion-answer.opened{
+    display: block;
+}
+
+.accordion-answer.collapsing{
+    height:0;
+    overflow: hidden;
+    transition: height .35 ease;
+}
+

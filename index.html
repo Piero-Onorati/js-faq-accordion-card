@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
     <!-- CDN Vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    
 </head>
 <body>
 
@@ -27,31 +28,36 @@
         </div>
         <div class="card-text" id="app">
             <h1>FAQ</h1>
-            <!-- <div class="accordion-item">
-                <button> <span>How many team members can I invite?</span><img src="images/icon-arrow-down.svg" alt=""></button>
-                <p>You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+            <div class="accordion-item">
+                <button class="accordion-question"> <span>How many team members can I invite?</span><img src="images/icon-arrow-down.svg" alt=""></button>
+                <p class="accordion-answer collapse">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
             </div>
             <div class="accordion-item">
-                <button><span>What is the maximum file upload size?</span><img src="images/icon-arrow-down.svg" alt=""></button>
-                <p> No more than 2GB. All files in your account must fit your allotted storage space.</p>
+                <button class="accordion-question"><span>What is the maximum file upload size?</span><img src="images/icon-arrow-down.svg" alt=""></button>
+                <p class="accordion-answer collapse"> No more than 2GB. All files in your account must fit your allotted storage space.</p>
             </div>
             <div class="accordion-item">
-                <button><span>How do I reset my password?</span><img src="images/icon-arrow-down.svg" alt=""></button>
-                <p>Click “Forgot password” from the login page or “Change password” from your profile page.A reset link will be emailed to you.</p>
+                <button class="accordion-question"><span>How do I reset my password?</span><img src="images/icon-arrow-down.svg" alt=""></button>
+                <p class="accordion-answer collapse">Click “Forgot password” from the login page or “Change password” from your profile page.A reset link will be emailed to you.</p>
             </div>
             <div class="accordion-item">
-                <button><span>Can I cancel my subscription?</span><img src="images/icon-arrow-down.svg" alt=""></button>
-                <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+                <button class="accordion-question"><span>Can I cancel my subscription?</span><img src="images/icon-arrow-down.svg" alt=""></button>
+                <p class="accordion-answer collapse">Yes! Send us a message and we’ll process your request no questions asked.</p>
             </div>
             <div class="accordion-item">
-                <button><span>Do you provide additional support?</span><img src="images/icon-arrow-down.svg" alt=""></button>
-                <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
-            </div> -->
+                <button class="accordion-question"><span>Do you provide additional support?</span><img src="images/icon-arrow-down.svg" alt=""></button>
+                <p class="accordion-answer collapse">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+            </div>
 
-            <div class="accordion-item" v-for="(accordion,index) in accordions">
-                <button @click="openAccordion(index)"> <span :class="{ boldQuestion : active && indexCheck == index }">{{accordion.question}}</span><img src="images/icon-arrow-down.svg" alt=""></button>
-                <p v-if="active && indexCheck == index" >{{accordion.answer}}</p>
-            </div>
+            <!-- <div class="accordion-item" v-for="(accordion,index) in accordions">
+                <button @click="openAccordion(index)"> 
+                    <span :class="{ boldQuestion : active && indexCheck == index }">{{accordion.question}}</span> 
+                    <img src="images/icon-arrow-down.svg" alt="">
+                </button>
+                <transition name= "fade">
+                    <p v-if="active && indexCheck == index" >{{accordion.answer}}</p>
+                </transition>
+            </div> -->
 
         </div>
     </div>
