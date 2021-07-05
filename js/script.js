@@ -4,7 +4,7 @@ const app = new Vue(
         data : {
             indexCheck:'',
             active:false,
-            boldQuestion: 'boldQuestion',
+            boldQuestion: 'boldQuestion',    
             accordions: [
                 {
                     question:'How many team members can I invite?',

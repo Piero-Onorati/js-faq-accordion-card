@@ -9,7 +9,7 @@ body{
     width: 100%;
     background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
     font-family: 'Kumbh Sans', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,8 +64,6 @@ button>span:active{
     font-weight: bold;
 }
 
-
-
 .card{
     background:  url(../images/bg-pattern-mobile.svg), white;
     background-repeat:no-repeat;
@@ -115,8 +113,8 @@ button>span:active{
 
 .card-text .accordion-item p{
     padding-bottom: 15px;
+    line-height: 18px; 
 }
-
 
 @media screen and (min-width:768px) {
 
@@ -164,7 +162,6 @@ button>span:active{
     .card-text .accordion-item {
         width: 85%;
     }
-
 
 }
 

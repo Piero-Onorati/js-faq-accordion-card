@@ -50,7 +50,7 @@
 
             <div class="accordion-item" v-for="(accordion,index) in accordions">
                 <button @click="openAccordion(index)"> <span :class="{ boldQuestion : active && indexCheck == index }">{{accordion.question}}</span><img src="images/icon-arrow-down.svg" alt=""></button>
-                <p v-if="active && indexCheck == index">{{accordion.answer}}</p>
+                <p v-if="active && indexCheck == index" >{{accordion.answer}}</p>
             </div>
 
         </div>
